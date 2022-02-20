@@ -1,0 +1,21 @@
+zuul:
+  routes:
+    saveCompanyV1:
+      url: http://localhost:8080/api/v1.0/market/company
+    deleteCompanyV1:
+      url: http://localhost:8082/api/v1.0/market/company
+    searchCompanyV1:
+      url: http://localhost:8084/api/v1.0/market/company
+    listCompanyV1:
+      url: http://localhost:8086/api/v1.0/market/company
+    addStockV1:
+      url: http://localhost:8088/api/v1.0/market/stock
+    fetchStocksV1:
+      url: http://localhost:8090/api/v1.0/market/stock
+
+
+spring:
+  application:
+    name: zuulgatewayV1
+server:
+  port: 8081
