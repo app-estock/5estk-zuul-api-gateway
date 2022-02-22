@@ -1,4 +1,6 @@
 zuul:
+  sensitiveHeaders:
+    ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin,Strict-Origin-When-Cross-Origin
   routes:
     saveCompanyV1:
       url: http://localhost:8080/api/v1.0/market/company
