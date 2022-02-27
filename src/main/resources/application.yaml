@@ -8,6 +8,8 @@ zuul:
       url: http://localhost:8082/api/v1.0/market/company
     searchCompanyV1:
       url: http://localhost:8084/api/v1.0/market/company
+    updateStockV1:
+      url: http://localhost:8085/api/v1.0/market/company
     listCompanyV1:
       url: http://localhost:8086/api/v1.0/market/company
     addStockV1:
