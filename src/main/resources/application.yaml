@@ -1,11 +1,17 @@
 zuul:
+  sensitiveHeaders:
+    ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin,Strict-Origin-When-Cross-Origin
   routes:
     saveCompanyV1:
       url: http://localhost:8080/api/v1.0/market/company
     deleteCompanyV1:
       url: http://localhost:8082/api/v1.0/market/company
+    deleteStocksV1:
+      url: http://localhost:8083/api/v1.0/market/stock
     searchCompanyV1:
       url: http://localhost:8084/api/v1.0/market/company
+    updateStockV1:
+      url: http://localhost:8085/api/v1.0/market/company
     listCompanyV1:
       url: http://localhost:8086/api/v1.0/market/company
     addStockV1:
