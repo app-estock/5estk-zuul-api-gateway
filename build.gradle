@@ -38,3 +38,11 @@ tasks.named('test') {
 bootRun.configure {
 	systemProperty "spring.profiles.active", 'Dev'
 }
+bootJar {
+	mainClass = 'com.estock.microservices.estockzuulgateway.EstockZuulGatewayApplicationTests'
+	enabled = true
+}
+
+jar {
+	enabled = true
+}
