@@ -1,9 +1,6 @@
 package com.estock.microservices.estockzuulgateway;
 
-import com.estock.microservices.estockzuulgateway.filters.ErrorFilter;
-import com.estock.microservices.estockzuulgateway.filters.PostFilter;
-import com.estock.microservices.estockzuulgateway.filters.PreFilter;
-import com.estock.microservices.estockzuulgateway.filters.RouteFilter;
+import com.estock.microservices.estockzuulgateway.filters.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -16,6 +13,7 @@ import org.springframework.web.filter.CorsFilter;
 
 @SpringBootApplication
 @EnableZuulProxy
+@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
 public class EstockZuulGatewayApplication {
 
 
@@ -44,6 +42,7 @@ public class EstockZuulGatewayApplication {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(false);
+
         config.addAllowedOrigin("*");
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
