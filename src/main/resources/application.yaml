@@ -4,22 +4,11 @@ zuul:
   routes:
     authenticateV1:
       url: http://localhost:8087/api/v1.0/market/user
-    saveCompanyV1:
+     CompanyV1:
       url: http://localhost:8080/api/v1.0/market/company
-    deleteCompanyV1:
-      url: http://localhost:8082/api/v1.0/market/company
-    deleteStocksV1:
+    StockV1:
       url: http://localhost:8083/api/v1.0/market/stock
-    searchCompanyV1:
-      url: http://localhost:8084/api/v1.0/market/company
-    updateStockV1:
-      url: http://localhost:8085/api/v1.0/market/company
-    listCompanyV1:
-      url: http://localhost:8086/api/v1.0/market/company
-    addStockV1:
-      url: http://localhost:8088/api/v1.0/market/stock
-    fetchStocksV1:
-      url: http://localhost:8090/api/v1.0/market/stock
+
 
 
 spring:
