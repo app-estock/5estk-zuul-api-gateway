@@ -30,7 +30,9 @@ public class PreFilter extends ZuulFilter {
     public Object run() {
         RequestContext context = RequestContext.getCurrentContext();
         HttpServletRequest request = context.getRequest();
-        System.out.println("Request Method : " + request.getMethod() + " Request URL : " + request.getRequestURL().toString());
+        System.out.println("Inside Pre Filter,Request Method : " + request.getMethod() + " Request URL : " + request.getRequestURL().toString());
+        System.out.println("Inside Pre Filter,Request AuthType : " + request.getAuthType() + " Request  : " + request.getHeader("authorization"));
+
         return null;
 
     }
