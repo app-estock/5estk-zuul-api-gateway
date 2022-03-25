@@ -3,11 +3,11 @@ zuul:
     ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin,Strict-Origin-When-Cross-Origin
   routes:
     authenticateV1:
-      url: http://localhost:8087/api/v1.0/market/user
+      url: http://${AUTH_HOST:localhost}:${AUTH_PORT:8087}/api/v1.0/market/user
     CompanyV1:
-      url: http://localhost:8082/api/v1.0/market/company
+      url: http://${CMP_HOST:localhost}:${CMP_PORT:8082}/api/v1.0/market/company
     StockV1:
-      url: http://localhost:8083/api/v1.0/market/stock
+      url: http://${STK_HOST:localhost}:${STK_PORT:8083}/api/v1.0/market/stock
 
 
 
